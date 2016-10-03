@@ -1,0 +1,32 @@
+= HTML Slides to PDF
+
+== Supported slide deck
+
+At the moment only Reveal.js is supported but code should be easy enough to inspire you for alternatives ;).
+
+== Usage
+
+=== Example
+
+[source]
+----
+java -jar html5slides2pdf.jar \
+ -d /path/to/folder/with/slides -i the-slide-index.html -o /path/to/output.pdf
+----
+
+=== Description
+
+java -jar html5slides2pdf.jar com.github.rmannibucau.slide2pdf.Slides2PDF [options...] arguments...
+
+* -c (--collapse-animations) : If a slide has some animations should all
+                              representations of this slide be collapsed
+                              (taking last one) (default: true)
+* -d (--doc-base) VAL        : base directory containing the source file
+* -i (--input) VAL           : Source html file
+* -m (--media-box) VAL       : media box to use for image pages, default to A4
+                              (default: A4)
+* -o (--output) VAL          : PDF output path
+* -s (--size) VAL            : size of the canvas (XxY syntax) (default: 800x600)
+* -t (--type) VAL            : type of html slides (default: revealjs)
+* -w (--work-dir) VAL        : temporary folder where storing pictures (default:
+                              ${java.io.tmpdir}/com.github.rmannibucau.slide2pdf.Slides2PDF-${milliseconds})
